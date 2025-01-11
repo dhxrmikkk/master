@@ -138,6 +138,7 @@
 
 @layer utilities {
   /* ========================================================== HEADER STICKY ========================================================== */
+
   .is-sticky {
     animation: headerStickyAnimation 0.5s ease-in-out;
     @apply fixed top-0 left-0 w-full z-50 transition-all duration-500;
@@ -151,5 +152,18 @@
       opacity: 1;
       transform: translateY(0);
     }
+  }
+
+  /* ========================================================== BEFORE - AFTER CSS ========================================================== */
+  .element {
+    @apply relative;
+  }
+  .element::before {
+    @apply content-[""] absolute top-0 left-0 w-full h-full bg-[url('path will be here')] bg-cover;
+    /* change it according to design  */
+  }
+  .element::after {
+    @apply content-[""] absolute top-0 left-0 w-full h-full bg-[url('path will be here')] bg-cover;
+    /* change it according to design  */
   }
 }
