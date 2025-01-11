@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* ======================================================= CONTAINER FLUID ======================================================= */
+  .container-fluid-lg {
+    @apply px-100 1440screen:px-75 1280screen:px-55 1024screen:px-40 768screen:px-30 640screen:px-20;
+  }
+  .container-fluid-md {
+    @apply px-75 1280screen:px-55 1024screen:px-40 768screen:px-30 640screen:px-20;
+  }
+
+  /* ======================================================= TITLE ======================================================= */
+
+  h1,
+  .h1 {
+    /* text-size will be here  */
+  }
+  h2,
+  .h2 {
+    /* text-size will be here  */
+  }
+  h3,
+  .h3 {
+    /* text-size will be here  */
+  }
+  h4,
+  .h4 {
+    /* text-size will be here  */
+  }
+  h5,
+  .h5 {
+    /* text-size will be here  */
+  }
+
+  /* ======================================================= TITLE FONT FAMILY ======================================================= */
+
+  .title-primary h1,
+  .title-primary h2,
+  .title-primary h3,
+  .title-primary h4,
+  .title-primary h5,
+  .title-primary h6 {
+    /* first font family will be here  */
+  }
+
+  .title-secondary h1,
+  .title-secondary h2,
+  .title-secondary h3,
+  .title-secondary h4,
+  .title-secondary h5,
+  .title-secondary h6 {
+    /* second font family will be here */
+  }
+
+  /* ======================================================= FONT WEIGHT ======================================================= */
+
+  .font-light {
+    @apply font-300;
+  }
+
+  .font-regular {
+    @apply font-400;
+  }
+
+  .font-medium {
+    @apply font-500;
+  }
+
+  .font-semibold {
+    @apply font-600;
+  }
+
+  .font-bold {
+    @apply font-700;
+  }
+
+  .font-bolder {
+    @apply font-800;
+  }
+
+  .font-extrabold {
+    @apply font-900;
+  }
+
+  /* ======================================================= CONTENT ======================================================= */
+
+  .content p {
+    @apply mt-5;
+    /* add font-family and size here */
+  }
+
+  .content p:first-child {
+    @apply mt-0;
+  }
+
+  .content-secondary p {
+    @apply mt-5 font-Worksans;
+  }
+  .content-secondary p:first-child {
+    @apply mt-0;
+  }
+}
+
+@layer components {
+  /* ======================================================= BUTTONS ======================================================= */
+  .btn {
+    /* button css will be here  */
+  }
+  .btn-primary {
+    /* first button css will be here  */
+  }
+  .btn-secondary {
+    /* first button css will be here  */
+  }
+
+  .btn-primary:hover {
+    /* first button hover effect css will be here  */
+  }
+  .btn-secondary:hover {
+    /* first button hover effect css will be here  */
+  }
+
+  /* ======================================================= INPUT ======================================================= */
+  input,
+  select,
+  textarea {
+    /* add input select and text-area here */
+  }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+}
+
+@layer utilities {
+  /* ========================================================== HEADER STICKY ========================================================== */
+  .is-sticky {
+    animation: headerStickyAnimation 0.5s ease-in-out;
+    @apply fixed top-0 left-0 w-full z-50 transition-all duration-500;
+  }
+  @keyframes headerStickyAnimation {
+    0% {
+      opacity: 0.5;
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
